@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main_screen">
+
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp">
+        <ImageView
+            android:id="@+id/mainmore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/more" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@+id/mainmore"
+            android:layout_marginLeft="10dp"
+            android:text="Online" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/textView3"
+            android:text="Store"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            />
+
+        <ImageView
+            android:id="@+id/cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/textView5"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/cart"
+            android:onClick="cart"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/shopping2"
+            android:scaleType="centerCrop"
+            android:layout_toEndOf="@id/cart"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/mainprofile"
+            />
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/plainbg"
+            android:hint="Search"
+            android:drawableLeft="@drawable/search1"
+            android:textSize="16sp"
+            android:backgroundTint="#6DFF1744"
+            android:drawablePadding="10dp"
+            android:layout_below="@id/cart"
+            android:layout_height="wrap_content"
+            android:padding="12dp"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="15dp"
+        android:text="Categories" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/categoryRec"
+        android:layout_below="@+id/text1"
+        android:layout_marginLeft="10dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/categoryRec"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="15dp"
+        android:text="Suggest for you" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mainRec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/text"/>
+
+</RelativeLayout>
